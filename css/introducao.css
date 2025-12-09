@@ -1,0 +1,64 @@
+.introducao {
+  max-width: 1200px; /* Para limitar o tamanho do site. Obs: Por conta de telas muito grandes*/
+  padding: 40px 20px; /*Para desgrudar do canto e topo*/
+  margin: 0 auto; /*Para colocar alinhados*/
+  display: grid;
+  grid-template-columns: 1fr 2fr; /*Dividiu em 1 parte para o Lobo e em 2 partes o restante do conteudo*/
+  gap: 100px;
+  align-items: center; /*Alinhar o conteudo ao centro*/
+}
+
+.introducao h1 {
+  font-size: 4.5rem;
+  line-height: 1.125; /*Relacionado ao tamanho da font-size, é um calculo*/
+  margin-bottom: 30px;
+  position: relative; /*Para dizer ao Pai que o alinhamento é relativo aquele local*/
+}
+
+.introducao h1::before {
+  content: ""; /*Adiciona somente para dizer que tem conteudo*/
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url(/img/detalhe.svg) no-repeat center; /*Para não repetir e alinhar ao centro*/
+  position: absolute; /*O position relative do .introducao h1 foi acrescentando para que a imagem não fosse para o topo do site*/
+  top: 0px;
+  left: -40px;
+  top: -15px;
+  z-index: -1; /*Para deixar o item atrás do texto*/
+}
+
+.introducao p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+@media (max-width: 1000px) {
+  .introducao h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .introducao h1 {
+    font-size: 2rem;
+  }
+  .introducao h1::before {
+    width: 30px;
+    height: 10px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  .introducao {
+    grid-template-columns: 1fr;
+  }
+  .introducao img {
+    display: none;
+  }
+}
