@@ -2,7 +2,6 @@ body {
   font-family: "Fira Sans", Arial, Helvetica, sans-serif;
   margin: 0px;
   color: #141414;
-  margin-bottom: 1000px;
 }
 
 h1,
@@ -20,12 +19,22 @@ ul {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
 .subtitulo {
   font-size: 8rem;
   line-height: 1;
-  text-transform: uppercase;
+  text-transform: uppercase; /*Deixar tudo em maisculo*/
   word-break: break-all;
+  max-width: 4ch; /*Para quebrar em 4 caracteres*/
+}
+
+@media (max-width: 800px) {
+  .subtitulo {
+    font-size: 3rem;
+    text-transform: capitalize;
+    max-width: initial !important; /*Esse important define que nenhuma outra ação sobreescreva essa*/
+  }
 }
