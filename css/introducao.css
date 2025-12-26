@@ -20,7 +20,7 @@
   display: block;
   width: 130px;
   height: 100px;
-  background: url(./img/detalhe.svg) no-repeat center; /*Para não repetir e alinhar ao centro*/
+  background: url(/img/detalhe.svg) no-repeat center; /*Para não repetir e alinhar ao centro*/
   position: absolute; /*O position relative do .introducao h1 foi acrescentando para que a imagem não fosse para o topo do site*/
   top: 0px;
   left: -40px;
